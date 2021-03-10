@@ -1,0 +1,1 @@
+# erdettidforguttetur.no

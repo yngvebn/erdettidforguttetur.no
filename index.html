@@ -1,12 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta http-equiv="X-UA-Compatible"
+          content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Er det tid for guttetur?</title>
+    <meta name="description" content="En guide til guttetur-tilgjengelighet nå i disse corona-tider">
+    <style>
+        body,
+        html {
+            height: 100%;
+            overflow: hidden;
+        }
+
+        body {
+            background: black;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        #is-it {
+            font-size: 4vmax;
+            text-align: center;
+        }
+        a {
+            color: white;
+        }
+    </style>
 </head>
+
 <body>
-    nope
+    <div id="is-it">
+        nope
+    </div>
+
+    <script>
+        const div = document.getElementById('is-it');
+        const texts = [
+            'Nope',
+            'Nei, ikke akkurat nå...',
+            'Kanskje vente til pandemien er over?',
+            'NEI!',
+            'Nah',
+            'Helst ikke',
+            `<a href="https://bit.ly/2PKucCJ" target="_blank">Les mer her!</a>`
+        ]
+        const text = Math.floor(Math.random() * 7);
+        div.innerHTML = texts[text];
+    </script>
 </body>
+
 </html>

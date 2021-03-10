@@ -71,22 +71,25 @@
     </div>
 
     <script>
-        const div = document.getElementById('is-it');
-        const texts = [
-            'Nope',
-            'Nei, ikke akkurat nå...',
-            'Kanskje vente til pandemien er over?',
-            'NEI!',
-            'Nah',
-            'Helst ikke',
-            `<a href="https://bit.ly/2PKucCJ" target="_blank">Les mer her!</a>`
-        ]
-        const text = Math.floor(Math.random() * 7);
-        div.innerHTML = texts[text];
+
+        // const texts = [
+        //     'Nope',
+        //     'Nei, ikke akkurat nå...',
+        //     'Kanskje vente til pandemien er over?',
+        //     'NEI!',
+        //     'Nah',
+        //     'Helst ikke',
+        //     `<a href="https://bit.ly/2PKucCJ" target="_blank">Les mer her!</a>`
+        // ]
+        // const text = Math.floor(Math.random() * 7);
+        function setText(message) {
+            const div = document.getElementById('is-it');
+            div.innerHTML = message;
+        }
 
         const data = fetch('/.netlify/functions/api')
             .then(response => response.json())
-            .then(response => console.log(response));
+            .then(response => setText(response.message));
     </script>
 </body>
 

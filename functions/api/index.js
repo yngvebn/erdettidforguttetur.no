@@ -1,11 +1,5 @@
 const texts = [
-    'Nope',
-    'Nei, ikke akkurat nå...',
-    'Kanskje vente til pandemien er over?',
-    'NEI!',
-    'Nah',
-    'Helst ikke',
-    `<a href="https://bit.ly/2PKucCJ" target="_blank">Les mer her!</a>`
+    'Ja!'
 ]
 
 exports.handler = async function (event, context) {
